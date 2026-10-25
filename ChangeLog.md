@@ -43,4 +43,4 @@ This change log documents the improvements made to the Dog Paw website in respon
 
  8. Background Image of the Website
 
-The background image of the website was changed from the one initially provided in the specification document for Formative Assignment Part 1 to a new background image generated using Figma
+ The background image of the website was changed from the one initially provided in the specification document for Formative  Assignment Part 1 to a new background image generated using Figma
