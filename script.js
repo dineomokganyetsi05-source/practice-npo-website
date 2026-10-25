@@ -1,8 +1,4 @@
-/* ==============================
-   DOG PAW WEBSITE JAVASCRIPT
-   ============================== */
 
-/* Mobile navigation */
 
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
@@ -27,7 +23,7 @@ if (menuToggle && siteNav) {
     });
 }
 
-/* Enquiry form */
+
 
 const enquiryForm = document.querySelector("#enquiry-form");
 const formFeedback = document.querySelector("#form-feedback");

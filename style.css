@@ -1,6 +1,4 @@
-/* =================================
-   DOG PAW WEBSITE STYLES
-   ================================= */
+
    :root {
     --ink: #172b2b;
     --brand: #6f9b9b;
@@ -10,7 +8,6 @@
     --white: #ffffff;
 }
 
-/* General page styling */
 
 * {
     box-sizing: border-box;
@@ -45,7 +42,7 @@ main {
     padding-bottom: 40px;
 }
 
-/* Headings and paragraphs */
+
 
 h1,
 h2,
@@ -73,7 +70,7 @@ p {
     margin: 12px 0;
 }
 
-/* Links */
+
 
 a {
     color: var(--brand-dark);
@@ -83,7 +80,7 @@ a:hover {
     color: var(--ink);
 }
 
-/* Skip link */
+
 
 .skip-link {
     position: absolute;
@@ -100,7 +97,7 @@ a:hover {
     top: 10px;
 }
 
-/* Header */
+
 
 .site-header {
     padding: 14px 0;
@@ -116,7 +113,7 @@ a:hover {
     gap: 20px;
 }
 
-/* Brand */
+
 
 .brand {
     display: flex;
@@ -142,7 +139,7 @@ a:hover {
     font-weight: normal;
 }
 
-/* Navigation */
+
 
 .site-nav {
     display: flex;
@@ -162,7 +159,7 @@ a:hover {
     color: var(--accent);
 }
 
-/* Mobile menu button */
+
 
 .menu-toggle {
     display: none;
@@ -175,7 +172,7 @@ a:hover {
     font-size: 16px;
 }
 
-/* Home page service cards */
+
 
 .service-card {
     margin: 20px 0;
@@ -204,7 +201,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Horizontal lines */
+
 
 hr {
     margin: 24px 0;
@@ -212,7 +209,7 @@ hr {
     border-top: 1px solid var(--brand);
 }
 
-/* Lists */
+
 
 ul {
     padding-left: 28px;
@@ -222,7 +219,7 @@ li {
     margin-bottom: 10px;
 }
 
-/* Forms */
+
 
 .contact-form {
     width: 100%;
@@ -275,7 +272,7 @@ li {
     font-weight: bold;
 }
 
-/* Keyboard focus */
+
 
 input:focus,
 select:focus,
@@ -286,7 +283,7 @@ a:focus-visible {
     outline-offset: 2px;
 }
 
-/* Buttons */
+
 
 .button {
     display: inline-block;
@@ -312,7 +309,7 @@ a:focus-visible {
     color: var(--ink);
 }
 
-/* Mobile screens */
+
 
 @media screen and (max-width: 700px) {
     .header-inner {
