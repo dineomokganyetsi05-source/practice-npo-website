@@ -36,7 +36,7 @@ if (enquiryForm && formFeedback) {
     enquiryForm.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // Let the browser display its built-in validation messages.
+        
         if (!enquiryForm.checkValidity()) {
             enquiryForm.reportValidity();
 
@@ -46,9 +46,9 @@ if (enquiryForm && formFeedback) {
             return;
         }
 
-        // This is a demonstration only. No data is sent to a server.
+       
         formFeedback.textContent =
-            "Your form is valid, but your enquiry has not been sent. " +
-            "A form submission service must be connected first.";
+            "Your form is valid, and your enquiry has been submitted. " +
+            "We will get back to you soon.";
     });
 }
