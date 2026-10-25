@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request pet assistance, donate or volunteer with Dog Paw.">
+    <title>Request Help | Dog Paw</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+                <span>
+                    Dog Paw
+                    <small>Care. Community. Every paw.</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="site-nav">
+                Menu
+            </button>
+
+            <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="enquiry.html" aria-current="page">Request Help</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="main" class="container">
+
+        <hr>
+
+        <h1>
+            Struggling to afford care for your pet?
+            <br>
+            Want to help a pet in need?
+        </h1>
+
+        <hr>
+
+        <section>
+            <h2>Enquire</h2>
+
+            <form class="contact-form" id="enquiry-form">
+
+                <fieldset class="form-field">
+                    <legend>Enquiry type</legend>
+
+                    <label for="reason">How can we help you?</label>
+
+                    <select id="reason" name="reason" required>
+                        <option value="">Select an enquiry type</option>
+                        <option value="help">I need help for my pet</option>
+                        <option value="donate">I want to donate</option>
+                        <option value="volunteer">I want to volunteer</option>
+                        <option value="question">I have a question</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="form-field">
+                    <legend>Your details</legend>
+
+                    <label for="name">Your name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        autocomplete="given-name"
+                        required>
+
+                    <label for="surname">Your surname</label>
+                    <input
+                        id="surname"
+                        name="surname"
+                        type="text"
+                        autocomplete="family-name"
+                        required>
+
+                    <label for="email">Email address</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autocomplete="email"
+                        required>
+                </fieldset>
+
+                <fieldset class="form-field">
+                    <legend>Pet details</legend>
+
+                    <label for="pet-type">Type of pet (dog, cat or other)</label>
+                    <input
+                        id="pet-type"
+                        name="pet-type"
+                        type="text"
+                        required>
+
+                    <label for="pet-name">Pet name</label>
+                    <input
+                        id="pet-name"
+                        name="pet-name"
+                        type="text">
+
+                    <label for="pet-age">Pet age</label>
+                    <input
+                        id="pet-age"
+                        name="pet-age"
+                        type="text">
+                </fieldset>
+
+                <fieldset class="form-field">
+                    <legend>What kind of help do you require?</legend>
+
+                    <input type="checkbox" id="dog-essentials"
+                           name="help-required" value="Dog essentials">
+                    <label for="dog-essentials">Dog essentials</label>
+                    <br>
+
+                    <input type="checkbox" id="food"
+                           name="help-required" value="Food">
+                    <label for="food">Food</label>
+                    <br>
+
+                    <input type="checkbox" id="other-essentials"
+                           name="help-required" value="Other pet essentials">
+                    <label for="other-essentials">Other pet essentials</label>
+                    <br>
+
+                    <input type="checkbox" id="medical-care"
+                           name="help-required" value="Veterinary or medical care">
+                    <label for="medical-care">Veterinary or medical care</label>
+                    <br>
+
+                    <input type="checkbox" id="pet-guidance"
+                           name="help-required" value="Pet care, training and tips">
+                    <label for="pet-guidance">Pet care, training and tips</label>
+                    <br>
+
+                    <input type="checkbox" id="beds"
+                           name="help-required" value="Beds and dog houses">
+                    <label for="beds">Beds and dog houses</label>
+                </fieldset>
+
+                <fieldset class="form-field">
+                    <legend>Talk to us</legend>
+
+                    <label for="message">Your message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Type your message"
+                        required></textarea>
+                </fieldset>
+
+                <button class="button button-primary" type="submit">
+                    Submit
+                </button>
+
+                <p class="form-help"
+                   id="form-feedback"
+                   role="status"
+                   aria-live="polite"></p>
+
+            </form>
+        </section>
+
+    </main>
+</body>
+</html>
