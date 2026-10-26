@@ -20,7 +20,6 @@ This change log documents the improvements made to the Dog Paw website in respon
 
 4. Website Background and Visual Presentation
 
- Integrated a background image from the project’s own image assets using CSS.
  Applied background styling while retaining the original website design and colour scheme.
  Reviewed the background image path and display settings to support correct image loading.
 
