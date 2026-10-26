@@ -43,3 +43,27 @@ This change log documents the improvements made to the Dog Paw website in respon
  8. Background Image of the Website
 
  The background image of the website was changed from the one initially provided in the specification document for Formative  Assignment Part 1 to a new background image generated using Figma
+
+Latest Improvements
+
+9. Form Validation
+
+ Improved validation for the name and surname fields.
+ Added clearer feedback for invalid form entries.
+Retained the existing required-field and email validation.
+
+
+10. Search Functionality
+
+ Added a search field to the homepage.
+ Enabled filtering of service cards by keyword.
+ Added feedback when no matching services are found.
+
+11. Project Documentation
+
+Improved README Markdown formatting.
+ Added clear links to the changelog and references.
+
+12. Git Commit Messages
+
+ Used descriptive commit messages to document code changes.
