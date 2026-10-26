@@ -354,3 +354,41 @@ a:focus-visible {
         margin-bottom: 10px;
     }
 }
+
+/* SERVICE SEARCH */
+
+.site-search {
+    margin: 24px 0;
+    padding: 20px;
+    background: var(--white);
+    border: 1px solid var(--brand);
+    border-radius: 8px;
+}
+
+.site-search label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.site-search input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: 1px solid var(--brand-dark);
+    border-radius: 5px;
+    font: inherit;
+}
+
+.site-search input:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+#search-feedback {
+    margin-bottom: 0;
+}
+
+.service-card[hidden] {
+    display: none !important;
+}

@@ -78,35 +78,88 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = "";
     }
 
-    lightboxLinks.forEach(function (link) {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
 
-            const thumbnail = link.querySelector("img");
+const enquiryForm = document.querySelector("#enquiry-form");
+const formFeedback = document.querySelector("#form-feedback");
 
-            enlargedImage.src = link.href;
-            enlargedImage.alt = thumbnail
-                ? thumbnail.alt
-                : "Enlarged image";
+if (enquiryForm && formFeedback) {
+    const nameField = document.querySelector("#name");
+    const surnameField = document.querySelector("#surname");
 
-            overlay.classList.add("active");
-            document.body.style.overflow = "hidden";
+    function validateName(field) {
+        if (field.value.trim().length < 2) {
+            field.setCustomValidity(
+                "Please enter at least 2 characters."
+            );
+        } else {
+            field.setCustomValidity("");
+        }
+    }
 
-            closeButton.focus();
+    [nameField, surnameField].forEach(function (field) {
+        if (field) {
+            field.addEventListener("input", function () {
+                validateName(field);
+                formFeedback.textContent = "";
+            });
+        }
+    });
+
+    enquiryForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        [nameField, surnameField].forEach(function (field) {
+            if (field) validateName(field);
         });
+
+        if (!enquiryForm.checkValidity()) {
+            enquiryForm.reportValidity();
+
+            formFeedback.textContent =
+                "Please correct the highlighted fields and try again.";
+
+            return;
+        }
+
+        formFeedback.textContent =
+            "Validation successful! Your details are complete. " +
+            "This demonstration form does not send enquiries yet.";
     });
+}
 
-    closeButton.addEventListener("click", closeLightbox);
 
-    overlay.addEventListener("click", function (event) {
-        if (event.target === overlay) {
-            closeLightbox();
+
+const serviceSearch = document.querySelector("#service-search");
+const searchFeedback = document.querySelector("#search-feedback");
+
+if (serviceSearch && searchFeedback) {
+    const serviceCards = document.querySelectorAll(".service-card");
+
+    serviceSearch.addEventListener("input", function () {
+        const query = serviceSearch.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        serviceCards.forEach(function (card) {
+            const cardText = card.textContent.toLowerCase();
+            const matches = cardText.includes(query);
+
+            card.hidden = !matches;
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        if (query === "") {
+            searchFeedback.textContent =
+                "Showing all " + visibleCount + " services.";
+        } else if (visibleCount === 0) {
+            searchFeedback.textContent =
+                "No services found. Try another keyword.";
+        } else {
+            searchFeedback.textContent =
+                visibleCount +
+                (visibleCount === 1 ? " service found." : " services found.");
         }
     });
-
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") {
-            closeLightbox();
-        }
-    });
-});
+}
