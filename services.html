@@ -24,14 +24,20 @@
     <main>
         <h1><strong>Our services </strong></h1>
         <div class="service-search-container">
-        <input
-             type="text"
-             id="service-search"
-             placeholder="Search for a service..."
-             aria-label="Search services"
+
+    <input
+        type="text"
+        id="service-search"
+        placeholder="Search for a service..."
     >
-          <p id="search-feedback" aria-live="polite"></p>
-        </div>
+
+    <button type="button" id="search-button">
+        Search
+    </button>
+
+    <p id="search-feedback"></p>
+
+</div>
         <h4> <p><em>We aim to provide better care for in need. <br>
         What ever your pets needs,we are happy to help</em></p></h4>
 
@@ -41,31 +47,33 @@
          <p><em>Treatment for pets whose owners can't afford a vet</em></p>
          </div>
 <hr>
-        <div class="service-card">    
+        <div class="service-card" id="food-service">    
          <h2><strong>Food</strong></h2>
          <p><em>Food to keep pets fed.</em></p>
         </div>
 
-<hr>
-        <div class="service-card">  
+hr>
+        <div class="service-card" id="essentials-service">  
+         <h2><strong>Essentials</strong></h2>
+         <p><em>Basic supplies for pets in need.</em></p>
         <h2><strong>Dog essentials</strong></h2>
          <p><em>Every day dog basics like leashes , collars and bowls.</em></p>
         </div>
 
 <hr>
-         <div class="service-card">
+         <div class="service-card" id="other-pet-essentials-service">
          <h2><strong>Other pet essentials</strong></h2>
          <p><em>Supplies for other pets in need.</em></p>
         </div>
 
 <hr>
-        <div class="service-card">  
+        <div class="service-card" id="petcare-service">  
          <h2><strong>Petcare , training and tips</strong></h2>
          <p><em>Practical guidance on feeding , health , grooming and daily cares.</em></p>
         </div>
 
 <hr>
-        <div class="service-card">  
+        <div class="service-card" id="beds-service">  
          <h2><strong>Beds and dog houses</strong></h2>
          <p><em>A safe , comfortable place for every dog to sleep in .</em></p>
         </div>
