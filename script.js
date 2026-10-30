@@ -127,39 +127,57 @@ if (enquiryForm && formFeedback) {
     });
 }
 
-
-
 const serviceSearch = document.querySelector("#service-search");
+const searchButton = document.querySelector("#search-button");
 const searchFeedback = document.querySelector("#search-feedback");
 
-if (serviceSearch && searchFeedback) {
+if (serviceSearch && searchButton && searchFeedback) {
+
     const serviceCards = document.querySelectorAll(".service-card");
 
-    serviceSearch.addEventListener("input", function () {
+    function searchServices() {
+
         const query = serviceSearch.value.trim().toLowerCase();
-        let visibleCount = 0;
 
-        serviceCards.forEach(function (card) {
+        if (query === "") {
+            searchFeedback.textContent = "Please enter a service to search for.";
+            return;
+        }
+
+        let foundService = null;
+
+        serviceCards.forEach(function(card) {
             const cardText = card.textContent.toLowerCase();
-            const matches = cardText.includes(query);
 
-            card.hidden = !matches;
-
-            if (matches) {
-                visibleCount++;
+            if (cardText.includes(query) && !foundService) {
+                foundService = card;
             }
         });
 
-        if (query === "") {
-            searchFeedback.textContent =
-                "Showing all " + visibleCount + " services.";
-        } else if (visibleCount === 0) {
-            searchFeedback.textContent =
-                "No services found. Try another keyword.";
+        if (foundService) {
+
+            searchFeedback.textContent = "Service found! Taking you there...";
+
+            foundService.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            foundService.style.outline = "2px solid #D4B76A";
+
         } else {
+
             searchFeedback.textContent =
-                visibleCount +
-                (visibleCount === 1 ? " service found." : " services found.");
+                "No matching service found. Try another keyword.";
+        }
+    }
+
+    searchButton.addEventListener("click", searchServices);
+
+    serviceSearch.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            searchServices();
         }
     });
 }
+
